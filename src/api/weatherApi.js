@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// OpenWeatherMap API key
-const API_KEY = "66c61925b9e24f5b9bbf9ce4f4da3686";
+const API_KEY = import.meta.env.VITE_API_KEY;
+console.log("API key:", API_KEY);
+
+
 
 // Nykyisen säädatan haku koordinaattien perusteella
 export const fetchWeatherDataByCoordinates = async (latitude, longitude) => {
